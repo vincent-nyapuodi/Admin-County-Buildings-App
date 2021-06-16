@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_2"
+            android:padding="@dimen/padding_x_small"
+            android:id="@+id/lyt_building">
+
+            <TextView
+                android:id="@+id/tv_buildingname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="Building Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium_large"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:text="NEW"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/text_medium"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_residence"
+            android:text="Private residence | Ghetto"
+            android:textStyle="normal"
+            android:textColor="@color/darkgray"
+            android:textSize="@dimen/text_small"
+            android:layout_marginBottom="@dimen/spacing_1"/>
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_2"
+            android:drawableLeft="@drawable/ic_baseline_location_24"
+            android:drawablePadding="@dimen/spacing_1"
+            android:drawableTint="@color/darkgray"
+            android:text="Location"
+            android:textColor="@color/darkgray"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
