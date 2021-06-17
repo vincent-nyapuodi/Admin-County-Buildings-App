@@ -1,4 +1,4 @@
-package com.project.countybuildingapp;
+package com.project.countybuildingapp.fragments;
 
 import android.media.Image;
 import android.os.Bundle;
@@ -11,22 +11,29 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.project.countybuildingapp.R;
+import com.project.countybuildingapp.utils.BottomNavLocker;
+import com.project.countybuildingapp.utils.ToolBarLocker;
+
 public class BuildingDetailFragment extends Fragment {
 
     private View view;
 
-    private ImageView imgBuilding, imgKraVerification, imgNemaVerification, imgFireSafetyVerification, imgSanitationVerification, imgInspectionVerification;
+    private ImageView imgKraVerification, imgNemaVerification, imgFireSafetyVerification, imgSanitationVerification, imgInspectionVerification;
     private TextView tvProfileBuildingName, tvProfileBuildingLocation, tvProfileSeeMore, tvCertificationSeeMore;
+    private ImageSlider imgBuildingSlider;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_building_detail, container, false);
 
         // set
-
+        ((ToolBarLocker)getActivity()).ToolBarLocked(false);
+        ((BottomNavLocker)getActivity()).BottomNavLocked(true);
 
         // find view by id
-        imgBuilding = view.findViewById(R.id.img_buildingimage);
+        imgBuildingSlider = view.findViewById(R.id.img_building_slider);
         imgKraVerification = view.findViewById(R.id.img_certifications_kraverification);
         imgNemaVerification = view.findViewById(R.id.img_certifications_nemaverification);
         imgFireSafetyVerification = view.findViewById(R.id.img_certifications_firesafetyverification);

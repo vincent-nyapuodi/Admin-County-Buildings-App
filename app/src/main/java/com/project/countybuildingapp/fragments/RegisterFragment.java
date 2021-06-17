@@ -3,6 +3,7 @@ package com.project.countybuildingapp.fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.project.countybuildingapp.R;
+import com.project.countybuildingapp.utils.BottomNavLocker;
+import com.project.countybuildingapp.utils.ToolBarLocker;
 
 
 public class RegisterFragment extends Fragment {
@@ -29,7 +32,8 @@ public class RegisterFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_register, container, false);
 
         // set
-
+        ((ToolBarLocker)getActivity()).ToolBarLocked(false);
+        ((BottomNavLocker)getActivity()).BottomNavLocked(true);
 
         // find view by id
         txtName = view.findViewById(R.id.txt_register_name);
@@ -53,14 +57,14 @@ public class RegisterFragment extends Fragment {
     private View.OnClickListener registerListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
+            Navigation.findNavController(view).navigate(R.id.navigateToRegister2);
         }
     };
 
     private View.OnClickListener registerToLoginListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
+            Navigation.findNavController(view).navigateUp();
         }
     };
 }

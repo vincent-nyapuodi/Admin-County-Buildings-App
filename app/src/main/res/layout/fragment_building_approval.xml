@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".fragments.BuildingApprovalFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginVertical="@dimen/spacing_5"
+                android:background="@color/mediumgray"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contractor Information"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="Architect"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_buildingarchitect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="Mureithi Designers"
+                    android:textColor="@color/darkgray"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="@dimen/spacing_1"
+                    android:background="@color/darkgray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="Supervisor - Civil Engineer"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_buildingsupervisor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="Engineer Oduor"
+                    android:textColor="@color/darkgray"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="@dimen/spacing_1"
+                    android:background="@color/darkgray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="General Contractor"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_buildingcontractor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="Musyoki General Contractor ltd"
+                    android:textColor="@color/darkgray"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginVertical="@dimen/spacing_5"
+                android:background="@color/mediumgray"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Approval Documents"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_1"
+                android:paddingHorizontal="@dimen/padding">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/spacing_2"
+                    android:src="@drawable/kra"
+                    app:civ_border_color="@color/black"
+                    app:civ_border_width="1dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="KRA Certificate"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/padding"
+                android:paddingVertical="@dimen/padding_x_small">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="KRA pin"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="Download"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/padding">
+
+                <TextView
+                    android:id="@+id/tv_kracertificateno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="1A7484G39"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:id="@+id/img_download_kra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:padding="@dimen/padding_x_small"
+                    android:src="@drawable/ic_baseline_cloud_download_24" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tv_kra_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:padding="@dimen/padding"
+                    android:text="Comment"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_kra_approve"
+                android:layout_width="@dimen/btn_x_long_width"
+                android:layout_height="@dimen/btn_x_long_height"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/spacing_2"
+                android:text="Approve"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="normal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/spacing_1"
+                android:background="@color/darkgray"
+                android:paddingHorizontal="@dimen/padding" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_1"
+                android:paddingHorizontal="@dimen/padding">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/spacing_2"
+                    android:src="@drawable/nema"
+                    app:civ_border_color="@color/black"
+                    app:civ_border_width="1dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Nema Certificate"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/padding"
+                android:paddingVertical="@dimen/padding_x_small">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="Nema Certificate No"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="Download"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/padding">
+
+                <TextView
+                    android:id="@+id/tv_nemacertificateno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="1A7484G39"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:id="@+id/img_download_nema"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:padding="@dimen/padding_x_small"
+                    android:src="@drawable/ic_baseline_cloud_download_24" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tv_nema_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:padding="@dimen/padding"
+                    android:text="Comment"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_nema_approve"
+                android:layout_width="@dimen/btn_x_long_width"
+                android:layout_height="@dimen/btn_x_long_height"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/spacing_2"
+                android:text="Approve"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="normal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/spacing_1"
+                android:background="@color/darkgray"
+                android:paddingHorizontal="@dimen/padding" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_1"
+                android:paddingHorizontal="@dimen/padding">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/spacing_2"
+                    android:src="@drawable/sanitation"
+                    app:civ_border_color="@color/black"
+                    app:civ_border_width="1dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Sanitation Certificate"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/padding"
+                android:paddingVertical="@dimen/padding_x_small">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="Sanitation Certficate No"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="Download"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/padding">
+
+                <TextView
+                    android:id="@+id/tv_sanitationcertificateno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="1A7484G39"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:id="@+id/img_download_sanitation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:padding="@dimen/padding_x_small"
+                    android:src="@drawable/ic_baseline_cloud_download_24" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tv_sanitation_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:padding="@dimen/padding"
+                    android:text="Comment"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_sanitation_approve"
+                android:layout_width="@dimen/btn_x_long_width"
+                android:layout_height="@dimen/btn_x_long_height"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/spacing_2"
+                android:text="Approve"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="normal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/spacing_1"
+                android:background="@color/darkgray"
+                android:paddingHorizontal="@dimen/padding" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_1"
+                android:paddingHorizontal="@dimen/padding">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/spacing_2"
+                    android:src="@drawable/firesafety"
+                    app:civ_border_color="@color/black"
+                    app:civ_border_width="1dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="FireSafety Certificate"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/padding"
+                android:paddingVertical="@dimen/padding_x_small">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="FireSafety Certificate No"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="Download"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/padding">
+
+                <TextView
+                    android:id="@+id/tv_firesafetycertificateno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="1A7484G39"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:id="@+id/img_download_firesafety"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:padding="@dimen/padding_x_small"
+                    android:src="@drawable/ic_baseline_cloud_download_24" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tv_firesafety_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:padding="@dimen/padding"
+                    android:text="Comment"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_firesafety_approve"
+                android:layout_width="@dimen/btn_x_long_width"
+                android:layout_height="@dimen/btn_x_long_height"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/spacing_2"
+                android:text="Approve"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="normal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/spacing_1"
+                android:background="@color/darkgray"
+                android:paddingHorizontal="@dimen/padding" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_1"
+                android:paddingHorizontal="@dimen/padding">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/spacing_2"
+                    android:src="@drawable/inspection"
+                    app:civ_border_color="@color/black"
+                    app:civ_border_width="1dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Inspection Certificate"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/padding"
+                android:paddingVertical="@dimen/padding_x_small">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="Inspection Certificate No"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="Download"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/padding">
+
+                <TextView
+                    android:id="@+id/tv_inspectioncertificateno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="1A7484G39"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:id="@+id/img_download_inspection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:padding="@dimen/padding_x_small"
+                    android:src="@drawable/ic_baseline_cloud_download_24" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tv_inspection_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:padding="@dimen/padding"
+                    android:text="Comment"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_inspection_approve"
+                android:layout_width="@dimen/btn_x_long_width"
+                android:layout_height="@dimen/btn_x_long_height"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/spacing_2"
+                android:text="Approve"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

@@ -3,6 +3,7 @@ package com.project.countybuildingapp.fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,8 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
 import com.project.countybuildingapp.R;
+import com.project.countybuildingapp.utils.BottomNavLocker;
+import com.project.countybuildingapp.utils.ToolBarLocker;
 import com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText;
 
 
@@ -28,6 +31,8 @@ public class Register2Fragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_register2, container, false);
 
         // set
+        ((ToolBarLocker)getActivity()).ToolBarLocked(false);
+        ((BottomNavLocker)getActivity()).BottomNavLocked(true);
 
 
         // find view by id
@@ -48,15 +53,18 @@ public class Register2Fragment extends Fragment {
     private CompoundButton.OnCheckedChangeListener chkListener = new CompoundButton.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-            // TODO : set button enabled to true on checked
-
+            if (b) {
+                btnRegister.setEnabled(true);
+            } else {
+                btnRegister.setEnabled(false);
+            }
         }
     };
 
     private View.OnClickListener registerListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
+            Navigation.findNavController(view).navigate(R.id.navigateToHomeFromRegister);
         }
     };
 }

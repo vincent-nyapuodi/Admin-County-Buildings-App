@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".fragments.BuildingProfileFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginVertical="@dimen/spacing_5"
+                android:background="@color/mediumgray"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Owner Information"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_ownername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="John Doe"
+                    android:textColor="@color/darkgray"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/darkgray"
+                    android:layout_marginVertical="@dimen/spacing_1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="Phone Number"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_ownerphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="0712 345678"
+                    android:textColor="@color/darkgray"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginVertical="@dimen/spacing_5"
+                android:background="@color/mediumgray"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Building Information"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_3"
+                android:orientation="vertical"
+                android:padding="@dimen/padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_buildingname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="John House"
+                    android:textColor="@color/darkgray"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/darkgray"
+                    android:layout_marginVertical="@dimen/spacing_1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="Building Type"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_buildingresidence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="Private Residence | Ghetto"
+                    android:textColor="@color/darkgray"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/darkgray"
+                    android:layout_marginVertical="@dimen/spacing_1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="Building Location"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_buildinglocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="Kiambu County - Limuru"
+                    android:textColor="@color/darkgray"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="bold" />
+                
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/darkgray"
+                    android:layout_marginVertical="@dimen/spacing_1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="Additional details"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_buildingdescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:text="We offer the best services in kiambu"
+                    android:textColor="@color/darkgray"
+                    android:textSize="@dimen/text_medium_large"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

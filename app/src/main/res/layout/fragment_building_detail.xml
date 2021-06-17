@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".BuildingDetailFragment">
+    android:background="@color/white"
+    tools:context=".fragments.BuildingDetailFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout_buildingdetail"
@@ -26,15 +27,16 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
             app:statusBarScrim="@android:color/transparent">
 
-            <ImageView
-                android:id="@+id/img_buildingimage"
+            <com.denzcoskun.imageslider.ImageSlider
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:contentDescription="Building Image"
+                android:id="@+id/img_building_slider"
                 android:fitsSystemWindows="true"
-                android:scaleType="centerCrop"
-                android:src="@drawable/blank_image"
-                app:layout_collapseMode="parallax" />
+                android:contentDescription="Building Image"
+                app:layout_collapseMode="parallax"
+                app:iss_auto_cycle="true"
+                app:iss_delay="0"
+                app:iss_period="1000"/>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -57,7 +59,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_2"
                 android:layout_marginBottom="@dimen/spacing_2"
-                app:cardBackgroundColor="@color/lightgray"
                 app:cardCornerRadius="2dp"
                 app:cardElevation="4dp"
                 app:cardUseCompatPadding="true"
@@ -132,7 +133,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_2"
                 android:layout_marginBottom="@dimen/spacing_2"
-                app:cardBackgroundColor="@color/lightgray"
                 app:cardCornerRadius="2dp"
                 app:cardElevation="4dp"
                 app:cardUseCompatPadding="true"

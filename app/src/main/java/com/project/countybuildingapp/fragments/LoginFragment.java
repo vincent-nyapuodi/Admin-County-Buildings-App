@@ -2,7 +2,9 @@ package com.project.countybuildingapp.fragments;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +15,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.project.countybuildingapp.R;
+import com.project.countybuildingapp.utils.BottomNavLocker;
+import com.project.countybuildingapp.utils.ToolBarLocker;
 import com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText;
 
 
@@ -31,7 +35,8 @@ public class LoginFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_login, container, false);
 
         // set
-
+        ((ToolBarLocker)(AppCompatActivity)getActivity()).ToolBarLocked(true);
+        ((BottomNavLocker)(AppCompatActivity)getActivity()).BottomNavLocked(true);
 
         // find view by id
         txtEmail = view.findViewById(R.id.txt_login_email);
@@ -54,14 +59,14 @@ public class LoginFragment extends Fragment {
     private View.OnClickListener loginListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
+            Navigation.findNavController(view).navigate(R.id.navigateToHomeFromLogin);
         }
     };
 
     private View.OnClickListener loginToRegisterListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
+            Navigation.findNavController(view).navigate(R.id.navigateToRegister1);
         }
     };
 }
