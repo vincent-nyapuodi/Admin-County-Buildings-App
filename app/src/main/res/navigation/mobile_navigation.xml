@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.project.countybuildingapp.fragments.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" >
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/navigateToBuildingDetail"
             app:destination="@id/buildingDetailFragment" />
@@ -44,8 +44,8 @@
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.project.countybuildingapp.fragments.RegisterFragment"
-        android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
+        android:label="Registration"
+        tools:layout="@layout/fragment_register">
         <action
             android:id="@+id/navigateToRegister2"
             app:destination="@id/register2Fragment" />
@@ -53,13 +53,26 @@
     <fragment
         android:id="@+id/register2Fragment"
         android:name="com.project.countybuildingapp.fragments.Register2Fragment"
-        android:label="fragment_register2"
-        tools:layout="@layout/fragment_register2" >
+        android:label="Registration"
+        tools:layout="@layout/fragment_register2">
         <action
             android:id="@+id/navigateToHomeFromRegister"
             app:destination="@id/navigation_home"
             app:launchSingleTop="true"
+            app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="true" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="phone"
+            app:argType="integer" />
+        <argument
+            android:name="county_government"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/buildingDetailFragment"
@@ -91,13 +104,18 @@
         tools:layout="@layout/fragment_building_profile" />
     <fragment
         android:id="@+id/splashScreenFragment"
-        android:name="com.project.countybuildingapp.SplashScreenFragment"
+        android:name="com.project.countybuildingapp.fragments.SplashScreenFragment"
         android:label="fragment_splash_screen"
         tools:layout="@layout/fragment_splash_screen" >
         <action
             android:id="@+id/navigateToLogin"
             app:destination="@id/loginFragment"
             app:launchSingleTop="true"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/navigateToHomeFromSplashscreen"
+            app:destination="@id/navigation_home"
             app:popUpTo="@id/splashScreenFragment"
             app:popUpToInclusive="true" />
     </fragment>

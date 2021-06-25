@@ -14,11 +14,12 @@
         android:orientation="vertical">
 
         <RelativeLayout
+            android:id="@+id/lyt_building"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/spacing_2"
-            android:padding="@dimen/padding_x_small"
-            android:id="@+id/lyt_building">
+            android:paddingHorizontal="@dimen/padding_x_small"
+            android:paddingVertical="@dimen/padding_small">
 
             <TextView
                 android:id="@+id/tv_list_buildingname"
@@ -42,17 +43,26 @@
                 android:textSize="@dimen/text_medium"
                 android:textStyle="normal" />
 
+            <ImageView
+                android:id="@+id/img_list_status"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_check_double"
+                android:visibility="visible" />
+
         </RelativeLayout>
 
         <TextView
+            android:id="@+id/tv_list_residence"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tv_list_residence"
+            android:layout_marginBottom="@dimen/spacing_1"
             android:text="Private residence | Ghetto"
-            android:textStyle="normal"
             android:textColor="@color/darkgray"
             android:textSize="@dimen/text_small"
-            android:layout_marginBottom="@dimen/spacing_1"/>
+            android:textStyle="normal" />
 
         <TextView
             android:id="@+id/tv_list_location"
