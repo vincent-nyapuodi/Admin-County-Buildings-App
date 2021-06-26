@@ -84,7 +84,6 @@ public class HomeFragment extends Fragment {
                     countyname = county.getCountyname();
                 }
 
-                Toast.makeText(getContext(), "County = " + countyname, Toast.LENGTH_SHORT).show();
                 options = new FirebaseRecyclerOptions.Builder<Building>()
                         .setQuery(reference.orderByChild("buildingcounty").equalTo(countyname), Building.class)
                         .build();
@@ -114,6 +113,7 @@ public class HomeFragment extends Fragment {
 
             }
         });
+
     }
 
     @Override

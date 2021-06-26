@@ -106,7 +106,7 @@ public class BuildingAdapter extends FirebaseRecyclerAdapter<Building, BuildingA
                         if (snapshot != null) {
                             reference.child(refKey).child("check_status").setValue(true);
 
-                            Navigation.findNavController(view).navigate(HomeFragmentDirections.navigateToBuildingDetail());
+                            Navigation.findNavController(view).navigate(HomeFragmentDirections.navigateToBuildingDetail(refKey));
                         }
                     }
 

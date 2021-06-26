@@ -55,7 +55,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/spacing_1"
-                    android:text="John Doe"
                     android:textColor="@color/darkgray"
                     android:textSize="@dimen/text_medium_large"
                     android:textStyle="bold" />
@@ -80,7 +79,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/spacing_1"
-                    android:text="0712 345678"
                     android:textColor="@color/darkgray"
                     android:textSize="@dimen/text_medium_large"
                     android:textStyle="bold" />
@@ -127,7 +125,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/spacing_1"
-                    android:text="John House"
                     android:textColor="@color/darkgray"
                     android:textSize="@dimen/text_medium_large"
                     android:textStyle="bold" />
@@ -152,7 +149,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/spacing_1"
-                    android:text="Private Residence | Ghetto"
                     android:textColor="@color/darkgray"
                     android:textSize="@dimen/text_medium_large"
                     android:textStyle="bold" />
@@ -177,7 +173,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/spacing_1"
-                    android:text="Kiambu County - Limuru"
                     android:textColor="@color/darkgray"
                     android:textSize="@dimen/text_medium_large"
                     android:textStyle="bold" />
@@ -202,7 +197,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/spacing_1"
-                    android:text="We offer the best services in kiambu"
                     android:textColor="@color/darkgray"
                     android:textSize="@dimen/text_medium_large"
                     android:textStyle="bold" />

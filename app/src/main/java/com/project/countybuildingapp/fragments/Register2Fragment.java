@@ -80,44 +80,36 @@ public class Register2Fragment extends Fragment {
 
 
         // listeners
-        chkAgree.setOnCheckedChangeListener(chkListener);
         btnRegister.setOnClickListener(registerListener);
 
         return view;
     }
 
-    private CompoundButton.OnCheckedChangeListener chkListener = new CompoundButton.OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-            if (b) {
-                btnRegister.setEnabled(true);
-            } else {
-                btnRegister.setEnabled(false);
-            }
-        }
-    };
-
     private View.OnClickListener registerListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            if (create(txtPassword)) {
-                progressBar.setVisibility(View.VISIBLE);
+            if (chkAgree.isChecked()) {
+                if (create(txtPassword)) {
+                    progressBar.setVisibility(View.VISIBLE);
 
-                String password = txtPassword.getText().toString().trim();
+                    String password = txtPassword.getText().toString().trim();
 
-                County county = new County(name, email, countyname, phone);
-                reference.push().setValue(county).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()) {
-                            register(email, password);
-                        } else {
-                            Toast.makeText(getContext(), "Error uploading", Toast.LENGTH_SHORT).show();
-                            progressBar.setVisibility(View.GONE);
+                    County county = new County(name, email, countyname, phone);
+                    reference.push().setValue(county).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                register(email, password);
+                            } else {
+                                Toast.makeText(getContext(), "Error uploading", Toast.LENGTH_SHORT).show();
+                                progressBar.setVisibility(View.GONE);
+                            }
                         }
-                    }
-                });
+                    });
 
+                }
+            } else {
+                Toast.makeText(getContext(), "Agree to the terms to complete registration", Toast.LENGTH_SHORT).show();
             }
         }
     };

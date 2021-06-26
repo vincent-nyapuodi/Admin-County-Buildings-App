@@ -77,31 +77,46 @@
     <fragment
         android:id="@+id/buildingDetailFragment"
         android:name="com.project.countybuildingapp.fragments.BuildingDetailFragment"
-        android:label="fragment_building_detail"
-        tools:layout="@layout/fragment_building_detail" >
+        android:label="Building Details"
+        tools:layout="@layout/fragment_building_detail">
         <action
             android:id="@+id/navigateToBuildingApproval"
             app:destination="@id/buildingApprovalFragment"
             app:launchSingleTop="true"
-            app:popUpTo="@id/buildingDetailFragment"
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/navigateToBuildingProfile"
             app:destination="@id/buildingProfileFragment"
             app:launchSingleTop="true"
-            app:popUpTo="@id/buildingDetailFragment"
             app:popUpToInclusive="true" />
+        <argument
+            android:name="ref_key"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/buildingApprovalFragment"
         android:name="com.project.countybuildingapp.fragments.BuildingApprovalFragment"
-        android:label="fragment_building_approval"
-        tools:layout="@layout/fragment_building_approval" />
+        android:label="Building Approval"
+        tools:layout="@layout/fragment_building_approval" >
+        <argument
+            android:name="building_code"
+            app:argType="string" />
+        <argument
+            android:name="building_name"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/buildingProfileFragment"
         android:name="com.project.countybuildingapp.fragments.BuildingProfileFragment"
-        android:label="fragment_building_profile"
-        tools:layout="@layout/fragment_building_profile" />
+        android:label="Building Profile"
+        tools:layout="@layout/fragment_building_profile" >
+        <argument
+            android:name="ref_key"
+            app:argType="string" />
+        <argument
+            android:name="buildingemail"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/splashScreenFragment"
         android:name="com.project.countybuildingapp.fragments.SplashScreenFragment"

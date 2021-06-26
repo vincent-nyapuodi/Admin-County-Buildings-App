@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".fragments.BuildingApprovalFragment">
 
     <androidx.core.widget.NestedScrollView
@@ -132,32 +132,50 @@
 
             </LinearLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/spacing_1"
-                android:paddingHorizontal="@dimen/padding">
+                android:orientation="vertical">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerInParent="true"
-                    android:layout_marginRight="@dimen/spacing_2"
-                    android:src="@drawable/kra"
-                    app:civ_border_color="@color/black"
-                    app:civ_border_width="1dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:paddingHorizontal="@dimen/padding">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/spacing_2"
+                        android:src="@drawable/kra"
+                        app:civ_border_color="@color/black"
+                        app:civ_border_width="1dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="KRA Certificate"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
 
                 <TextView
+                    android:id="@+id/tv_kra_context"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="KRA Certificate"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/text_medium"
-                    android:textStyle="bold" />
+                    android:layout_height="6dp"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginLeft="@dimen/spacing_6"
+                    android:textColor="@color/darkgreen"
+                    android:textSize="@dimen/text_x_small"
+                    android:text="Approved"
+                    android:visibility="invisible" />
 
-            </RelativeLayout>
+            </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -200,7 +218,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_centerInParent="true"
                     android:layout_marginBottom="@dimen/spacing_1"
-                    android:text="1A7484G39"
+                    android:text="null"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_medium_large"
                     android:textStyle="normal" />
@@ -214,6 +232,7 @@
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="@dimen/spacing_1"
                     android:padding="@dimen/padding_x_small"
+                    android:visibility="invisible"
                     android:src="@drawable/ic_baseline_cloud_download_24" />
 
             </RelativeLayout>
@@ -241,10 +260,11 @@
 
             <Button
                 android:id="@+id/btn_kra_approve"
-                android:layout_width="@dimen/btn_x_long_width"
-                android:layout_height="@dimen/btn_x_long_height"
+                android:layout_width="277dp"
+                android:layout_height="57dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/spacing_2"
+                android:background="@drawable/round_button"
                 android:text="Approve"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
@@ -252,37 +272,55 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="2dp"
                 android:layout_marginVertical="@dimen/spacing_1"
                 android:background="@color/darkgray"
                 android:paddingHorizontal="@dimen/padding" />
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/spacing_1"
-                android:paddingHorizontal="@dimen/padding">
+                android:orientation="vertical">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerInParent="true"
-                    android:layout_marginRight="@dimen/spacing_2"
-                    android:src="@drawable/nema"
-                    app:civ_border_color="@color/black"
-                    app:civ_border_width="1dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:paddingHorizontal="@dimen/padding">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/spacing_2"
+                        android:src="@drawable/nema"
+                        app:civ_border_color="@color/black"
+                        app:civ_border_width="1dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Nema Certificate"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
 
                 <TextView
+                    android:id="@+id/tv_nema_context"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="Nema Certificate"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/text_medium"
-                    android:textStyle="bold" />
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginLeft="@dimen/spacing_6"
+                    android:textColor="@color/darkgreen"
+                    android:textSize="@dimen/text_x_small"
+                    android:text="Approved"
+                    android:visibility="invisible" />
 
-            </RelativeLayout>
+            </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -326,7 +364,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_centerInParent="true"
                     android:layout_marginBottom="@dimen/spacing_1"
-                    android:text="1A7484G39"
+                    android:text="null"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_medium_large"
                     android:textStyle="normal" />
@@ -340,6 +378,7 @@
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="@dimen/spacing_1"
                     android:padding="@dimen/padding_x_small"
+                    android:visibility="invisible"
                     android:src="@drawable/ic_baseline_cloud_download_24" />
 
             </RelativeLayout>
@@ -371,6 +410,7 @@
                 android:layout_height="@dimen/btn_x_long_height"
                 android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/spacing_2"
+                android:background="@drawable/round_button"
                 android:text="Approve"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
@@ -378,37 +418,55 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="2dp"
                 android:layout_marginVertical="@dimen/spacing_1"
                 android:background="@color/darkgray"
                 android:paddingHorizontal="@dimen/padding" />
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/spacing_1"
-                android:paddingHorizontal="@dimen/padding">
+                android:orientation="vertical">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerInParent="true"
-                    android:layout_marginRight="@dimen/spacing_2"
-                    android:src="@drawable/sanitation"
-                    app:civ_border_color="@color/black"
-                    app:civ_border_width="1dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:paddingHorizontal="@dimen/padding">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/spacing_2"
+                        android:src="@drawable/sanitation"
+                        app:civ_border_color="@color/black"
+                        app:civ_border_width="1dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Sanitation Certificate"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
 
                 <TextView
+                    android:id="@+id/tv_sanitation_context"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="Sanitation Certificate"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/text_medium"
-                    android:textStyle="bold" />
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginLeft="@dimen/spacing_6"
+                    android:textColor="@color/darkgreen"
+                    android:textSize="@dimen/text_x_small"
+                    android:text="Approved"
+                    android:visibility="invisible" />
 
-            </RelativeLayout>
+            </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -452,7 +510,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_centerInParent="true"
                     android:layout_marginBottom="@dimen/spacing_1"
-                    android:text="1A7484G39"
+                    android:text="null"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_medium_large"
                     android:textStyle="normal" />
@@ -466,6 +524,7 @@
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="@dimen/spacing_1"
                     android:padding="@dimen/padding_x_small"
+                    android:visibility="invisible"
                     android:src="@drawable/ic_baseline_cloud_download_24" />
 
             </RelativeLayout>
@@ -497,6 +556,7 @@
                 android:layout_height="@dimen/btn_x_long_height"
                 android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/spacing_2"
+                android:background="@drawable/round_button"
                 android:text="Approve"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
@@ -504,37 +564,55 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="2dp"
                 android:layout_marginVertical="@dimen/spacing_1"
                 android:background="@color/darkgray"
                 android:paddingHorizontal="@dimen/padding" />
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/spacing_1"
-                android:paddingHorizontal="@dimen/padding">
+                android:orientation="vertical">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerInParent="true"
-                    android:layout_marginRight="@dimen/spacing_2"
-                    android:src="@drawable/firesafety"
-                    app:civ_border_color="@color/black"
-                    app:civ_border_width="1dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:paddingHorizontal="@dimen/padding">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/spacing_2"
+                        android:src="@drawable/firesafety"
+                        app:civ_border_color="@color/black"
+                        app:civ_border_width="1dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="FireSafety Certificate"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
 
                 <TextView
+                    android:id="@+id/tv_firesafety_context"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="FireSafety Certificate"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/text_medium"
-                    android:textStyle="bold" />
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginLeft="@dimen/spacing_6"
+                    android:textColor="@color/darkgreen"
+                    android:textSize="@dimen/text_x_small"
+                    android:text="Approved"
+                    android:visibility="invisible" />
 
-            </RelativeLayout>
+            </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -578,7 +656,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_centerInParent="true"
                     android:layout_marginBottom="@dimen/spacing_1"
-                    android:text="1A7484G39"
+                    android:text="null"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_medium_large"
                     android:textStyle="normal" />
@@ -592,6 +670,7 @@
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="@dimen/spacing_1"
                     android:padding="@dimen/padding_x_small"
+                    android:visibility="invisible"
                     android:src="@drawable/ic_baseline_cloud_download_24" />
 
             </RelativeLayout>
@@ -623,6 +702,7 @@
                 android:layout_height="@dimen/btn_x_long_height"
                 android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/spacing_2"
+                android:background="@drawable/round_button"
                 android:text="Approve"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
@@ -630,37 +710,55 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="2dp"
                 android:layout_marginVertical="@dimen/spacing_1"
                 android:background="@color/darkgray"
                 android:paddingHorizontal="@dimen/padding" />
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/spacing_1"
-                android:paddingHorizontal="@dimen/padding">
+                android:orientation="vertical">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerInParent="true"
-                    android:layout_marginRight="@dimen/spacing_2"
-                    android:src="@drawable/inspection"
-                    app:civ_border_color="@color/black"
-                    app:civ_border_width="1dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_1"
+                    android:paddingHorizontal="@dimen/padding">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/spacing_2"
+                        android:src="@drawable/inspection"
+                        app:civ_border_color="@color/black"
+                        app:civ_border_width="1dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Inspection Certificate"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
 
                 <TextView
+                    android:id="@+id/tv_inspection_context"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="Inspection Certificate"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/text_medium"
-                    android:textStyle="bold" />
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginLeft="@dimen/spacing_6"
+                    android:textColor="@color/darkgreen"
+                    android:textSize="@dimen/text_x_small"
+                    android:text="Approved"
+                    android:visibility="invisible" />
 
-            </RelativeLayout>
+            </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -704,7 +802,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_centerInParent="true"
                     android:layout_marginBottom="@dimen/spacing_1"
-                    android:text="1A7484G39"
+                    android:text="null"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_medium_large"
                     android:textStyle="normal" />
@@ -718,6 +816,7 @@
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="@dimen/spacing_1"
                     android:padding="@dimen/padding_x_small"
+                    android:visibility="invisible"
                     android:src="@drawable/ic_baseline_cloud_download_24" />
 
             </RelativeLayout>
@@ -749,6 +848,7 @@
                 android:layout_height="@dimen/btn_x_long_height"
                 android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/spacing_2"
+                android:background="@drawable/round_button"
                 android:text="Approve"
                 android:textAllCaps="false"
                 android:textColor="@color/white"

@@ -92,7 +92,6 @@
         android:layout_gravity="center"
         android:layout_marginBottom="@dimen/spacing_4"
         android:background="@drawable/round_button"
-        android:enabled="false"
         android:text="Register"
         android:textAllCaps="false"
         android:textColor="@color/white"
