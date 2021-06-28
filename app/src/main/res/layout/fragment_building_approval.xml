@@ -167,12 +167,12 @@
                 <TextView
                     android:id="@+id/tv_kra_context"
                     android:layout_width="wrap_content"
-                    android:layout_height="6dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginVertical="4dp"
                     android:layout_marginLeft="@dimen/spacing_6"
-                    android:textColor="@color/darkgreen"
-                    android:textSize="@dimen/text_x_small"
                     android:text="Approved"
+                    android:textColor="@color/darkgreen"
+                    android:textSize="@dimen/text_small"
                     android:visibility="invisible" />
 
             </LinearLayout>
@@ -232,8 +232,8 @@
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="@dimen/spacing_1"
                     android:padding="@dimen/padding_x_small"
-                    android:visibility="invisible"
-                    android:src="@drawable/ic_baseline_cloud_download_24" />
+                    android:src="@drawable/ic_baseline_cloud_download_24"
+                    android:visibility="invisible" />
 
             </RelativeLayout>
 
@@ -315,9 +315,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="4dp"
                     android:layout_marginLeft="@dimen/spacing_6"
-                    android:textColor="@color/darkgreen"
-                    android:textSize="@dimen/text_x_small"
                     android:text="Approved"
+                    android:textColor="@color/darkgreen"
+                    android:textSize="@dimen/text_small"
                     android:visibility="invisible" />
 
             </LinearLayout>
@@ -378,8 +378,8 @@
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="@dimen/spacing_1"
                     android:padding="@dimen/padding_x_small"
-                    android:visibility="invisible"
-                    android:src="@drawable/ic_baseline_cloud_download_24" />
+                    android:src="@drawable/ic_baseline_cloud_download_24"
+                    android:visibility="invisible" />
 
             </RelativeLayout>
 
@@ -461,9 +461,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="4dp"
                     android:layout_marginLeft="@dimen/spacing_6"
-                    android:textColor="@color/darkgreen"
-                    android:textSize="@dimen/text_x_small"
                     android:text="Approved"
+                    android:textColor="@color/darkgreen"
+                    android:textSize="@dimen/text_small"
                     android:visibility="invisible" />
 
             </LinearLayout>
@@ -524,8 +524,8 @@
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="@dimen/spacing_1"
                     android:padding="@dimen/padding_x_small"
-                    android:visibility="invisible"
-                    android:src="@drawable/ic_baseline_cloud_download_24" />
+                    android:src="@drawable/ic_baseline_cloud_download_24"
+                    android:visibility="invisible" />
 
             </RelativeLayout>
 
@@ -607,9 +607,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="4dp"
                     android:layout_marginLeft="@dimen/spacing_6"
-                    android:textColor="@color/darkgreen"
-                    android:textSize="@dimen/text_x_small"
                     android:text="Approved"
+                    android:textColor="@color/darkgreen"
+                    android:textSize="@dimen/text_small"
                     android:visibility="invisible" />
 
             </LinearLayout>
@@ -670,8 +670,8 @@
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="@dimen/spacing_1"
                     android:padding="@dimen/padding_x_small"
-                    android:visibility="invisible"
-                    android:src="@drawable/ic_baseline_cloud_download_24" />
+                    android:src="@drawable/ic_baseline_cloud_download_24"
+                    android:visibility="invisible" />
 
             </RelativeLayout>
 
@@ -753,9 +753,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="4dp"
                     android:layout_marginLeft="@dimen/spacing_6"
-                    android:textColor="@color/darkgreen"
-                    android:textSize="@dimen/text_x_small"
                     android:text="Approved"
+                    android:textColor="@color/darkgreen"
+                    android:textSize="@dimen/text_small"
                     android:visibility="invisible" />
 
             </LinearLayout>
@@ -816,8 +816,8 @@
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="@dimen/spacing_1"
                     android:padding="@dimen/padding_x_small"
-                    android:visibility="invisible"
-                    android:src="@drawable/ic_baseline_cloud_download_24" />
+                    android:src="@drawable/ic_baseline_cloud_download_24"
+                    android:visibility="invisible" />
 
             </RelativeLayout>
 
