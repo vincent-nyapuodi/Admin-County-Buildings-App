@@ -6,7 +6,6 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -35,12 +34,11 @@ import com.project.countybuildingapp.models.Comment;
 import com.project.countybuildingapp.models.Contractor;
 import com.project.countybuildingapp.models.County;
 import com.project.countybuildingapp.utils.BottomNavLocker;
-import com.project.countybuildingapp.utils.DialogListener;
 import com.project.countybuildingapp.utils.ToolBarLocker;
 
 import java.sql.Timestamp;
 
-public class BuildingApprovalFragment extends Fragment implements DialogListener {
+public class BuildingApprovalFragment extends Fragment {
 
     private View view;
     private TextView tvBuildingArchitect, tvBuildingSupervisor, tvBuildingContractor;
@@ -976,10 +974,5 @@ public class BuildingApprovalFragment extends Fragment implements DialogListener
         } else {
             Toast.makeText(getContext(), certificatetype + " details have not been uploaded", Toast.LENGTH_LONG).show();
         }
-    }
-
-    @Override
-    public void onDialogPositiveClick(DialogFragment dialog, String Comment) {
-
     }
 }
