@@ -53,6 +53,7 @@ public class BuildingDetailFragment extends Fragment {
 
         user = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference().child("table_building");
+        email = user.getEmail();
 
         args = BuildingDetailFragmentArgs.fromBundle(getArguments());
         refKey = args.getRefKey();
