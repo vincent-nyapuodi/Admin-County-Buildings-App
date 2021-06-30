@@ -289,12 +289,6 @@
 
                     </RelativeLayout>
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginVertical="@dimen/spacing_1"
-                        android:background="@color/darkgray" />
-
                     <TextView
                         android:id="@+id/tv_certifications_seemore"
                         android:layout_width="wrap_content"

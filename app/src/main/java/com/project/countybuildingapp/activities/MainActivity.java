@@ -17,21 +17,20 @@ import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity implements BottomNavLocker, ToolBarLocker {
 
-    BottomNavigationView navView;
+    public BottomNavigationView navView;
     AppBarConfiguration appBarConfiguration;
-    Toolbar toolbar;
+    public Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+        navView = findViewById(R.id.bottom_navview);
 
         toolbar = findViewById(R.id.toolbar);
         toolbar.setBackgroundColor(getColor(R.color.white));
         setSupportActionBar(toolbar);
-
-        navView = findViewById(R.id.nav_view);
 
         appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
